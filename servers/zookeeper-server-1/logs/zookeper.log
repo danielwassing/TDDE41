@@ -1,0 +1,23 @@
+2019-04-18 11:27:19,983 [myid:] - INFO  [main:QuorumPeerConfig@136] - Reading configuration from: conf/zoo.cfg
+2019-04-18 11:27:20,008 [myid:] - INFO  [main:QuorumPeer$QuorumServer@185] - Resolved hostname: localhost to address: localhost/127.0.0.1
+2019-04-18 11:27:20,008 [myid:] - INFO  [main:QuorumPeer$QuorumServer@185] - Resolved hostname: localhost to address: localhost/127.0.0.1
+2019-04-18 11:27:20,011 [myid:] - INFO  [main:QuorumPeer$QuorumServer@185] - Resolved hostname: localhost to address: localhost/127.0.0.1
+2019-04-18 11:27:20,011 [myid:] - INFO  [main:QuorumPeerConfig@398] - Defaulting to majority quorums
+2019-04-18 11:27:20,019 [myid:1] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-04-18 11:27:20,019 [myid:1] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2019-04-18 11:27:20,019 [myid:1] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2019-04-18 11:27:20,168 [myid:1] - INFO  [main:QuorumPeerMain@130] - Starting quorum peer
+2019-04-18 11:27:20,175 [myid:1] - INFO  [main:ServerCnxnFactory@117] - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2019-04-18 11:27:20,183 [myid:1] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-04-18 11:27:20,184 [myid:1] - ERROR [main:QuorumPeerMain@92] - Unexpected exception, exiting abnormally
+java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:461)
+	at java.base/sun.nio.ch.Net.bind(Net.java:453)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:73)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.configure(NIOServerCnxnFactory.java:90)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.runFromConfig(QuorumPeerMain.java:133)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:114)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:81)
